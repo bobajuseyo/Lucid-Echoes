@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.btn-success {
+  background-color: #27284d;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-success:hover {
+  background-color: #7c848f;
+}
+
+.hidden {
+    display: none;
+}
+
+.vissible {
+    display: block;
+}
+
+.container-fluid {
+    max-width: 600px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    /* Tablet */
+    body {
+        font-size: 13px;
+    }
+
+    .container-fluid {
+        max-width: 90% !important;
+        padding: 0 20px;
+    }
+
+    .btn-success {
+        width: 80% !important;
+        margin-top: 10px !important;
+    }
+
+    img {
+        width: 90% !important;
+        height: auto !important;
+    }
+
+    .progress {
+        margin-top: 80px !important;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Large Phones */
+    body {
+        font-size: 12px;
+    }
+
+    .container-fluid {
+        max-width: 90% !important;
+        padding: 0 15px;
+    }
+
+    .btn-success {
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+
+    img {
+        width: 100% !important;
+        height: auto;
+    }
+
+    .progress {
+        margin-top: 50px !important;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Small Phones */
+    body {
+        font-size: 10px;
+    }
+
+    .container-fluid {
+        margin: 0 auto !important;
+        padding: 0 10px;
+    }
+
+    .btn-success {
+        height: auto !important;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        padding: 8px;
+    }
+
+    .progress {
+        margin-top: 60px !important;
+        margin-bottom: 15px;
+    }
+}

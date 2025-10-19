@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="custom.css">
+    <script src="config.js"></script>
+    <title>Lucid Echoes</title>
+</head> 
+<body>
+    <main>
+        <div id="main-screen" class="container-fluid">
+            <div class="text-center">
+                <img src="./img/Your paragraph text (1).png" class="img-fluid mx-auto d-block w-100" alt="">
+                <button type="button" onclick="showNextScreen()" class="btn btn-secondary mt-1">เริ่มต้น</button>
+                <p class="mt-4">[ 5-10 minute to build your dream ]</p>
+                <p>Dreams Tell You Who You Are</p>
+                <!-- <p style="margin-bottom: 137px;">Allow yourself to be free and relax before pressing start</p> -->
+            </div>
+        </div>
+        <div id="first-screen" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="progress w-100 mx-auto" style="margin-top: 140px; margin-bottom: 50px;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 10%; background-color: black;"></div>
+                </div>
+                <div class="container-fluid">
+                    <div class="animation-container mt-4">
+                        <video src="./vdo.mp4" class="img-fluid" style="width: 100%;" autoplay loop>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <img src="./img/Story text (3).png" alt="" class="img-fluid w-75">
+                    <button type="button" onclick="continueScreen()" class="btn btn-success mt-2 w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="second-screen" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="progress w-100 mx-auto" style="margin-top: 120px; margin-bottom: 0px;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 20%; background-color: rgb(20, 20, 20);"></div>
+                </div>
+                <div class="container-fluid">
+                    <img src="./img/LEStory (1).png" alt="" class="img-fluid w-75">
+                    <button type="button" onclick="continueScreen2()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="third-screen" class="hidden container-fluid" style="margin-top: 400px;">
+            <div class="text-center">
+                <div class="progress my-4 w-100 mx-auto">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 30%; background-color: rgb(40, 40, 40);"></div>
+                </div>
+                <div class="container-fluid">
+                    <img src="./img/LElabel.png" alt="" class="img-fluid w-100 my-4">
+                    <button type="button" onclick="continueScreenCalm()" class="btn btn-success mt-2 mx-2" style="width: 200px;">สงบนิ่ง ไม่รู้สึกหวั่นไหว</button>
+                    <button type="button" onclick="continueScreenFear()" class="btn btn-success mt-2 mx-2" style="width: 200px;">หวาดกลัว กระวนกระวาย</button>
+                </div>
+            </div>
+        </div>
+        <!-- /-------- Calm ---------/ -->
+        <div class="calm">
+            <div id="calm-screen" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 80px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%; background-color: rgb(60, 60, 60);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (2).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenCalm2()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen2" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 80px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%; background-color: rgb(80, 80, 80);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (3).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenCalm3()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen3" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 250px; margin-bottom: 20px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 60%; background-color: rgb(100, 100, 100);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (11).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenCalm4()" class="btn btn-success mx-2 mb-3" style="width: 200px; height: 90px;">ก้าวเดินตามไปยังต้นเสียงโดยไม่ลังเล</button>
+                            <button type="button" onclick="continueScreenCalm5()" class="btn btn-success mx-2 mb-3" style="width: 200px; height: 90px;">เดินตามเสียงเพลงไปอย่างระมัดระวัง</button>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenCalm6()" class="btn btn-success mx-2" style="width: 200px; height: 90px;">หยุดยืนอยู่กับที่</button>
+                            <button type="button" onclick="continueScreenCalm7()" class="btn btn-success mx-2" style="width: 200px; height: 90px;">เบือนหน้าหนีออกห่างจากเสียงเพลง</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen4" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 300px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 65%; background-color: rgb(120, 120, 120);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (1).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenCalm8()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen5" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 300px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 65%; background-color: rgb(120, 120, 120);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (2).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenCalm9()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen6" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 300px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 65%; background-color: rgb(120, 120, 120);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (3).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenCalm10()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen7" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 300px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 65%; background-color: rgb(120, 120, 120);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (4).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenCalm11()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen8" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 80px; margin-bottom: 20px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%; background-color: rgb(140, 140, 140);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (5).png" alt="" class="w-75 mb-3">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenCalm12()" class="btn btn-success mx-2" style="width: 200px; height: 50px;">ใช่! มันเพราะมากเลย</button>
+                            <button type="button" onclick="continueScreenCalm13()" class="btn btn-success mx-2" style="width: 200px; height: 50px;">นิ่งเฉยไม่ตอบกลับ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div id="calm-screen9" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 80px; margin-bottom: 20px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%; background-color: rgb(140, 140, 140);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (9).png" alt="" class="w-75 mb-3">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenCalm12()" class="btn btn-success mx-2" style="width: 200px; height: 50px;">ใช่! มันเพราะมากเลย</button>
+                            <button type="button" onclick="continueScreenCalm13()" class="btn btn-success mx-2" style="width: 200px; height: 50px;">นิ่งเฉยไม่ตอบกลับ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen10" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 80px; margin-bottom: 20px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%; background-color: rgb(140, 140, 140);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (6).png" alt="" class="w-75 mb-3">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenCalm14()" class="btn btn-success mx-2" style="width: 220px; height: 50px;">ตามกระต่ายตัวนั้นไป</button>
+                            <button type="button" onclick="continueScreenCalm19()" class="btn btn-success mx-2" style="width: 220px; height: 50px;">เดินออกห่างกระต่ายตัวนั้น</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen11" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 80px; margin-bottom: 20px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%; background-color: rgb(140, 140, 140);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (7).png" alt="" class="w-75 mb-3">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenCalm14()" class="btn btn-success mx-2" style="width: 200px; height: 50px;">เดินเข้าไปหากระต่ายตัวนั้น</button>
+                            <button type="button" onclick="continueScreenCalm19()" class="btn btn-success mx-2" style="width: 200px; height: 50px;">เดินออกห่างกระต่ายตัวนั้น</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen12" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 300px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%; background-color: rgb(160, 160, 160);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (5).png" alt="" class="w-75 mb-3">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenCalm14()" class="btn btn-success mx-2" style="width: 200px; height: 50px;">ตามกระต่ายตั้วนั้นไป</button>
+                            <button type="button" onclick="continueScreenCalm17()" class="btn btn-success mx-2" style="width: 200px; height: 50px;">ไม่ตามกระต่ายตั้วนั้นไป</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen13" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 300px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%; background-color: rgb(160, 160, 160);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (6).png" alt="" class="w-75 mb-3">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenCalm17()" class="btn btn-success mx-2" style="width: 200px; height: 50px;">ยืนนิ่งอยู่ที่เดิม</button>
+                            <button type="button" onclick="continueScreenCalm19()" class="btn btn-success mx-2" style="width: 200px; height: 50px;">เดินตามหาสถานที่อื่น ๆ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen14" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%; background-color: #c0ffe2;"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (10).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenCalm15()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen15" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%; background-color: #71ffbd;"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (7).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenCalm16()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <!-- ฉากจบป่าไม้กับกระต่าย -->
+            <div id="calm-screen16" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 95%; background-color: #1eff96;"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (11).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenEnd4()" class="btn btn-success mx-2" style="width: 200px; height: 70px;">แสงไฟจากเหล่าหิ่งห้อย และความสงบ</button>
+                            <button type="button" onclick="continueScreenEnd6()" class="btn btn-success mx-2" style="width: 200px; height: 70px;">แสงไฟจากพระอาทิตย์ และความอบอุ่น</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen17" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%; background-color: #cbd4ff;"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (12).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenCalm18()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <!-- ฉากจบพระจันทร์ในป่า -->
+            <div id="calm-screen18" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 95%; background-color: #94a7ff;"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (8).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenEnd()" class="btn btn-success mx-2" style="width: 200px; height: 50px;">ความกลัว</button>
+                            <button type="button" onclick="continueScreenEnd2()" class="btn btn-success mx-2" style="width: 200px; height: 50px;">ความสงบ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen19" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%; background-color: rgb(180, 180, 180);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (9).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenCalm20()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen20" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%; background-color: rgb(180, 180, 180);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (13).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenCalm21()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">เดินไปทางซ้าย</button>
+                            <button type="button" onclick="continueScreenCalm24()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">เดินไปทางขวา</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen21" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%; background-color: rgb(255, 217, 185);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (14).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenCalm22()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen22" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%; background-color: rgb(255, 177, 113);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (15).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenCalm23()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <!-- ฉากจบพระอาทิตย์ในทะเล -->
+            <div id="calm-screen23" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 95%; background-color: rgb(255, 157, 77);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (10).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenEnd8()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ความอบอุ่นของแสงพระอาทิตย์</button>
+                            <button type="button" onclick="continueScreenEnd10()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ความสงบของบรรยากาศนี้</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen24" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%; background-color: rgb(200, 200, 200);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (16).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenCalm25()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="calm-screen25" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%; background-color: rgb(200, 200, 200);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (17).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenFear12()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ลูบหัวแมวตัวนั้น</button>
+                            <button type="button" onclick="continueScreenFear14()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">อยู่นิ่ง ๆ ไม่ทำอะไรกับแมวตัวนั้น</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- /-------- Fear --------/ -->
+        <div class="fear">
+            <div id="fear-screen" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 80px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%; background-color: rgb(60, 60, 60);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (2).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear2()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen2" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 80px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%; background-color: rgb(80, 80, 80);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (4).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear3()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen3" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 250px; margin-bottom: 20px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 60%; background-color: rgb(100, 100, 100);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (12).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenFear4()" class="btn btn-success mx-2 mb-3" style="width: 200px; height: 90px;">ก้าวเดินตามแมวไปทันทีโดยไม่ลังเล</button>
+                            <button type="button" onclick="continueScreenFear6()" class="btn btn-success mx-2 mb-3" style="width: 200px; height: 90px;">รอให้แมวเริ่มเคลื่อนที่นำไปก่อนแล้วค่อยตามไปอย่างระมัดระวัง</button>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenFear8()" class="btn btn-success mx-2" style="width: 200px; height: 90px;">หยุดยืนอยู่กับที่ มองมันอยู่นิ่ง ๆ เพื่อดูว่ามันจะทำอะไร</button>
+                            <button type="button" onclick="continueScreenFear10()" class="btn btn-success mx-2" style="width: 200px; height: 90px;">หันหลังเดินออกห่างจากแมวตัวนั้น</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen4" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 65%; background-color: rgb(120, 120, 120);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (18).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear5()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen5" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%; background-color: rgb(120, 120, 120);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (13).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenFear12()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ลูบหัวแมวตัวนั้น</button>
+                            <button type="button" onclick="continueScreenFear14()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">อยู่นิ่ง ๆ ไม่ทำอะไรกับแมวตัวนั้น</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen6" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 65%; background-color: rgb(120, 120, 120);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (34).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear7()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen7" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%; background-color: rgb(120, 120, 120);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (14).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenFear12()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ลูบหัวแมวตัวนั้น</button>
+                            <button type="button" onclick="continueScreenFear14()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">อยู่นิ่ง ๆ ไม่ทำอะไรกับแมวตัวนั้น</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen8" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 65%; background-color: rgb(120, 120, 120);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (15).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear9()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen9" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%; background-color: rgb(120, 120, 120);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (16).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenFear23()" class="btn btn-success mx-2" style="width: 250px; height: 60px;">เดินตามเสียงเพลงที่คุ้นเคยไป</button>
+                            <button type="button" onclick="continueScreenFear26()" class="btn btn-success mx-2" style="width: 250px; height: 60px;">หยุดยืนอยู่กับที่ ปล่อยให้ท่วงทำนองของเพลงค่อย ๆ บันเลงจนจบ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen10" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 65%; background-color: rgb(120, 120, 120);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (17).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear11()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen11" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%; background-color: rgb(120, 120, 120);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (20).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenFear29()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">เดินไปทางซ้าย</button>
+                            <button type="button" onclick="continueScreenFear32()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">เดินไปทางขวา</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen12" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%; background-color: rgb(140, 140, 140);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (21).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear13()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen13" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%; background-color: rgb(140, 140, 140);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (18).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenFear15()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">เกิดอะไรขึ้นทำไมแมวถึงหายไปได้ !</button>
+                            <button type="button" onclick="continueScreenFear19()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">รีบออกจากตรงนี้ดีกว่า</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen14" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%; background-color: rgb(140, 140, 140);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (19).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenFear17()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ยืนนิ่งอยู่กับที่เดิม</button>
+                            <button type="button" onclick="continueScreenFear19()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">เดินตามหาสถานที่อื่น ๆ</button>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div id="fear-screen15" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%; background-color: rgb(160, 160, 160);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (20).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear16()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen16" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%; background-color: rgb(160, 160, 160);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (35).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenFear21()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ว่ายต่อไปจนกว่าจะถึงชายฝั่ง</button>
+                            <button type="button" onclick="continueScreenFear17()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">รอจนกว่าจะมีคนมาช่วย</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen17" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%; background-color: rgb(255, 247, 173);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (36).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear18()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen18" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 95%; background-color: rgb(255, 239, 91);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (21).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenEnd12()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ความกลัว</button>
+                            <button type="button" onclick="continueScreenEnd14()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ความสงบ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen19" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%; background-color: rgb(160, 160, 160);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (37).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear20()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen20" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%; background-color: rgb(160, 160, 160);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (22).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenFear23()" class="btn btn-success mx-2" style="width: 250px; height: 60px;">เดินตามเสียงเพลงที่คุ้นเคยไป</button>
+                            <button type="button" onclick="continueScreenFear26()" class="btn btn-success mx-2" style="width: 250px; height: 60px;">หยุดยืนอยู่กับที่ ปล่อยให้ท่วงทำนองของเพลงค่อย ๆ บันเลงจนจบ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen21" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%; background-color: rgb(255, 177, 113);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (38).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear22()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen22" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 95%; background-color: rgb(255, 177, 77);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (23).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenEnd8()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ความอบอุ่นของแสงพระอาทิตย์</button>
+                            <button type="button" onclick="continueScreenEnd10()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ความสงบของบรรยากาศนี้</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen23" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%; background-color: rgb(255, 199, 177);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (26).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear24()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen24" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%; background-color: rgb(255, 160, 122);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (39).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear25()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen25" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%; background-color: rgb(255, 112, 55);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (23).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenEnd16()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ความอบอุ่นของแสงพระอาทิตย์</button>
+                            <button type="button" onclick="continueScreenEnd18()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ความสงบของบรรยากาศนี้</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen26" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%; background-color: rgb(238, 255, 206);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (29).png" alt="" class="w-75 mb-3">
+                        <button type="button" onclick="continueScreenFear27()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen27" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%; background-color: rgb(210, 253, 130);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (30).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear28()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen28" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%; background-color: rgb(186, 255, 58);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (25).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenEnd20()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">เสียงทำนองของเพลงอันไพเราะ</button>
+                            <button type="button" onclick="continueScreenEnd22()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ความสงบและความเงียบ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen29" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 71%; background-color: rgb(160, 160, 160);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (26).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear30()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen30" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 72%; background-color: rgb(160, 160, 160);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (40).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear31()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen31" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 73%; background-color: rgb(160, 160, 160);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (41).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenCalm14()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ตามกระต่ายตัวนั้นไป</button>
+                            <button type="button" onclick="continueScreenCalm19()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">เดินออกห่างกระต่ายตัวนั้น</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen32" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%; background-color: rgb(189, 207, 255);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (27).png" alt="" class="w-75">
+                        <button type="button" onclick="continueScreenFear33()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen33" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 60px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%; background-color: rgb(121, 157, 255);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEStory (33).png" alt="" class="w-75 mb-3">
+                        <button type="button" onclick="continueScreenFear34()" class="btn btn-success w-25">ถัดไป</button>
+                    </div>
+                </div>
+            </div>
+            <div id="fear-screen34" class="hidden container-fluid">
+                <div class="text-center">
+                    <div class="progress w-100 mx-auto" style="margin-top: 200px; margin-bottom: 40px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%; background-color: rgb(63, 113, 252);"></div>
+                    </div>
+                    <div class="container-fluid">
+                        <img src="./img/LEText (28).png" alt="" class="w-75">
+                        <div class="button-group">
+                            <button type="button" onclick="continueScreenEnd24()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ความสวยงามของพระจันทร์</button>
+                            <button type="button" onclick="continueScreenEnd26()" class="btn btn-success mx-2" style="width: 200px; height: 60px;">ความสงบของบรรยากาศนี้</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 200px; margin-bottom: 40px;">
+                    <img src="./img/LEText (29).png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenEnd1()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen1" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 60px; margin-bottom: 40px;">
+                    <img src="./img/(ed) ความกลัว ของ [(ed) ฉากจบพระจันทร์ในป่า].png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenReset()" class="btn btn-success w-25">เริ่มต้นใหม่</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen2" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 200px; margin-bottom: 40px;">
+                    <img src="./img/LEText (29).png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenEnd3()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen3" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 60px; margin-bottom: 40px;">
+                    <img src="./img/(ed) ความสงบ ของ [(ed) ฉากจบพระจันทร์ในป่า].png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenReset()" class="btn btn-success w-25">เริ่มต้นใหม่</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen4" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 200px; margin-bottom: 40px;">
+                    <img src="./img/LEText (29).png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenEnd5()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen5" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 60px; margin-bottom: 40px;">
+                    <img src="./img/(ed) แสงไฟจากเหล่าหิ่งห้อย และความสงบ ของ [(ed) ฉากจบป่าไม้กับกระต่าย].png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenReset()" class="btn btn-success w-25">เริ่มต้นใหม่</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen6" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 200px; margin-bottom: 40px;">
+                    <img src="./img/LEText (29).png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenEnd7()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen7" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 60px; margin-bottom: 40px;">
+                    <img src="./img/(ed) แสงไฟจากพระอาทิตย์ และความอบอุ่น ของ [(ed) ฉากจบป่าไม้กับกระต่าย].png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenReset()" class="btn btn-success w-25">เริ่มต้นใหม่</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen8" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 200px; margin-bottom: 40px;">
+                    <img src="./img/LEText (29).png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenEnd9()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen9" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 60px; margin-bottom: 40px;">
+                    <img src="./img/(ed) ความอบอุ่นของแสงพระอาทิตย์ ของ [(ed) ฉากจบพระอาทิตย์ในทะเล].png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenReset()" class="btn btn-success w-25">เริ่มต้นใหม่</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen10" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 200px; margin-bottom: 40px;">
+                    <img src="./img/LEText (29).png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenEnd11()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen11" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 60px; margin-bottom: 40px;">
+                    <img src="./img/(ed) ความสงบของบรรยากาศนี้ ของ [(ed) ฉากจบพระอาทิตย์ในทะเล].png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenReset()" class="btn btn-success w-25">เริ่มต้นใหม่</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen12" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 200px; margin-bottom: 40px;">
+                    <img src="./img/LEText (29).png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenEnd13()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen13" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 60px; margin-bottom: 40px;">
+                    <img src="./img/(ed) ความกลัว ของ [(ed) ฉากจบพระจันทร์ในยามราตรี].png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenReset()" class="btn btn-success w-25">เริ่มต้นใหม่</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen14" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 200px; margin-bottom: 40px;">
+                    <img src="./img/LEText (29).png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenEnd15()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen15" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 60px; margin-bottom: 40px;">
+                    <img src="./img/(ed) ความสงบ ของ [(ed) ฉากจบพระจันทร์ในยามราตรี].png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenReset()" class="btn btn-success w-25">เริ่มต้นใหม่</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen16" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 200px; margin-bottom: 40px;">
+                    <img src="./img/LEText (29).png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenEnd17()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen17" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 60px; margin-bottom: 40px;">
+                    <img src="./img/(ed) ความอบอุ่นของแสงพระอาทิตย์ ของ [(ed) ฉากจบพระอาทิตย์ริมชายหาด].png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenReset()" class="btn btn-success w-25">เริ่มต้นใหม่</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen18" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 200px; margin-bottom: 40px;">
+                    <img src="./img/LEText (29).png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenEnd19()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen19" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 60px; margin-bottom: 40px;">
+                    <img src="./img/(ed) ความสงบของบรรยากาศนี้ ของ [(ed) ฉากจบพระอาทิตย์ริมชายหาด].png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenReset()" class="btn btn-success w-25">เริ่มต้นใหม่</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen20" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 200px; margin-bottom: 40px;">
+                    <img src="./img/LEText (29).png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenEnd21()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen21" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 60px; margin-bottom: 40px;">
+                    <img src="./img/(ed) เสียงทำนองของเพลงอันไพเราะ  [(ed) ฉากจบสวนสาธารณะ].png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenReset()" class="btn btn-success w-25">เริ่มต้นใหม่</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen22" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 200px; margin-bottom: 40px;">
+                    <img src="./img/LEText (29).png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenEnd23()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen23" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 60px; margin-bottom: 40px;">
+                    <img src="./img/(ed)ความสงบและความเงียบ  [(ed) ฉากจบสวนสาธารณะ].png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenReset()" class="btn btn-success w-25">เริ่มต้นใหม่</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen24" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 200px; margin-bottom: 40px;">
+                    <img src="./img/LEText (29).png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenEnd25()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen25" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 60px; margin-bottom: 40px;">
+                    <img src="./img/(ed) ความสวยงามของพระจันทร์  ของ [(ed) ฉากจบพระจันทร์ในทะเล].png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenReset()" class="btn btn-success w-25">เริ่มต้นใหม่</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen26" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 200px; margin-bottom: 40px;">
+                    <img src="./img/LEText (29).png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenEnd27()" class="btn btn-success w-25">ถัดไป</button>
+                </div>
+            </div>
+        </div>
+        <div id="end-screen27" class="hidden container-fluid">
+            <div class="text-center">
+                <div class="container-fluid" style="margin-top: 60px; margin-bottom: 40px;">
+                    <img src="./img/(ed) ความสงบของบรรยากาศนี้ ของ [(ed) ฉากจบพระจันทร์ในทะเล].png" alt="" class="w-75 mb-3">
+                    <button type="button" onclick="continueScreenReset()" class="btn btn-success w-25">เริ่มต้นใหม่</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="text-center bg-dark text-white py-4">
+            <p class="m-0">© 2025 Lucid Echo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

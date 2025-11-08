@@ -7,4 +7,4 @@ Players experience the story through **visuals, sounds, and decision-making**, w
 Every path leads to unique outcomes, encouraging reflection on fear, memory, and identity within the dream world.
 
 ---
-This project is a part of TEAM PROJECT 2 subject, KMITL
+This project is part of the course **90642172 - Team-Project 2** at *King Mongkut’s Institute of Technology Ladkrabang (KMITL)*

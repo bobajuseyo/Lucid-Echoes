@@ -6,5 +6,9 @@ The game invites players to explore their **thoughts, emotions, and inner reacti
 Players experience the story through **visuals, sounds, and decision-making**, where each choice shapes the **atmosphere, scene, and emotional tone** of the journey.  
 Every path leads to unique outcomes, encouraging reflection on fear, memory, and identity within the dream world.
 
+
 ---
 This project is part of the course **90642172 - Team-Project 2** at *King Mongkut’s Institute of Technology Ladkrabang (KMITL)*
+
+---
+> 🌐 You can access the project online at [lucid-echoes.vercel.app](https://lucid-echoes.vercel.app/)
